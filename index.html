@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Task Board</title>
+</head>
+
+<body>
+    <div class="container">
+        <!--Main div of page - static html-->
+        <div class="row">
+            <!--div - row of header - static html-->
+            <div class="col-sm-12 col-lg-12">
+                <h1 class="myHeader">My Task Board</h1>
+            </div>
+        </div>
+        <div class="row">
+            <!--div - row of form - static html-->
+            <div class="col-sm-12 col-lg-12 form-group myForm">
+                <form>
+                    <!--form to input new task-->
+                        <div class="row" id="divOfForm">
+                                <textarea name="inputTextOfTask" id="inptTxt" cols="20" rows="5"
+                                    placeholder="What do you need to do?" class=" form-control inputArea inputTextArea" required></textarea>
+                        </div>
+                        <div  class="row inputdateandtime">
+                            <div class="col-sm-12 col-lg-8 myStyle">
+                                <label for="inptDate">By?</label><input type="date" name="inputDateOfTask" id="inptDate"
+                                   class="form-control inputArea" required>
+                            </div>
+                            <div class="col-sm-12 col-lg-4 myStyle">
+                                <label for="inptTime">At?</label><input type="time" name="inputTimeOfTask" id="inptTime"
+                                    class="form-control inputArea">
+                            </div>
+                        </div>
+                    <div  class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12 text-right">
+                            <input type="button" name="submit" value="Add New Task" id="btnAdd" onclick="addTask()"
+                                class="btn inputArea myStyle">
+                            <input type="reset" value="Clear Form" class="btn inputArea myStyle">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row" id="shoeNotesFromLS">
+            <!--div - row of notes - dynamic html-->
+        </div>
+    </div>
+    <script src="Task.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
